@@ -11,9 +11,10 @@ class SinglyLinkedList {
     const newNode = new SimpleNode(value);
     newNode.next = this.head;
     this.head = newNode;
-    if (this.tail === null) {
-      this.tail = newNode;
-    }
+    if (this.tail === null){
+		this.tail = newNode;
+	}
+    
     this._size++;
   }
 
@@ -52,12 +53,21 @@ class SinglyLinkedList {
     }
     return false;
   }
-
+  
+  //--------------------------------------------------------------------------
+  // "TODO RETO: Implementar countOccurrences(value) en SinglyLinkedList."
   countOccurrences(value) {
-    throw new Error(
-      "TODO RETO: Implementar countOccurrences(value) en SinglyLinkedList."
-    );
+	let count = 0;
+	let current = this.head; //en js se usa this para hacer referencia a los atributos de la clase
+	while (current !== null){
+		if (this._isSameValue(current.value, value)){
+			count++;
+		}
+		current = current.next;
+	}
+	return count;
   }
+  //--------------------------------------------------------------------------
 
   clean() {
     throw new Error("TODO RETO: Implementar clean() en SinglyLinkedList.");
