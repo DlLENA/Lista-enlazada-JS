@@ -77,13 +77,28 @@ class SinglyLinkedList {
   }
   //--------------------------------------------------------------------------
 
-
   reverseInPlace() {
-    throw new Error(
-      "TODO RETO: Implementar reverseInPlace() en SinglyLinkedList."
-    );
+  // "TODO RETO: Implementar reverseInPlace() en SinglyLinkedList."
+   if (this.head === null){
+	return;
+   }
+   let previous = null;
+   let current = this.head;
+   let nextNode = null;
+   
+   this.tail = this.head;
+   
+   while (current !== null){
+	nextNode = current.next;
+	current.next = previous;
+	previous = current;
+	current = nextNode;
+   }
+   
+   this.head = previous;
+   
   }
-  
+  //--------------------------------------------------------------------------
 
   removeDuplicates() {
     throw new Error(
