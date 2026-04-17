@@ -67,17 +67,23 @@ class SinglyLinkedList {
 	}
 	return count;
   }
+  
+  //--------------------------------------------------------------------------
+  clean() {
+  //"TODO RETO: Implementar clean() en SinglyLinkedList.");
+  this.tail = null;
+  this.head = null;
+  this._size = 0;
+  }
   //--------------------------------------------------------------------------
 
-  clean() {
-    throw new Error("TODO RETO: Implementar clean() en SinglyLinkedList.");
-  }
 
   reverseInPlace() {
     throw new Error(
       "TODO RETO: Implementar reverseInPlace() en SinglyLinkedList."
     );
   }
+  
 
   removeDuplicates() {
     throw new Error(

@@ -88,24 +88,14 @@ class DoublyLinkedList {
    }
    //--------------------------------------------------------------------------
 
-  /*countOccurrences(value) {
-    throw new Error(
-      "TODO RETO: Implementar countOccurrences(value) en DoublyLinkedList."
-    );
-	let count = 0;
-		let current = this.head; //en js se usa this para hacer referencia a los atributos de la clase
-		while (current !== null){
-			if (this._isSameValue(current.value, value)){
-				count++;
-			}
-			current = current.next;
-		}
-		return = current.next;
-  }*/
-
-  clean() {
-    throw new Error("TODO RETO: Implementar clean() en DoublyLinkedList.");
-  }
+   clean() {
+    //"TODO RETO: Implementar clean() en DoublyLinkedList.");
+    this.tail = null;
+    this.head = null;
+    this._size = 0;
+    }
+	//--------------------------------------------------------------------------
+ 
 
   reverseInPlace() {
     throw new Error(
