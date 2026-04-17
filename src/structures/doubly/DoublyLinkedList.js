@@ -119,12 +119,31 @@ class DoublyLinkedList {
 	}
 	//--------------------------------------------------------------------------
 
-
   removeDuplicates() {
-    throw new Error(
-      "TODO RETO: Implementar removeDuplicates() en DoublyLinkedList."
-    );
+  //"TODO RETO: Implementar removeDuplicates() en DoublyLinkedList."
+    let current = this.head;
+
+  while (current !== null){
+  	let runner = current;
+  	
+  	while (runner.next !== null){
+  		if (this._isSameValue(current.value, runner.next.value)){
+  			
+  			runner.next = runner.next.next;
+  			this._size--;
+  		}else {
+  			runner = runner.next;
+  		}
+  		if (runner.next === null){
+  			this.tail. runner;
+  		}
+  	}
+  	current = current.next;
   }
+
+  }
+  //--------------------------------------------------------------------------
+
 
   size() {
     return this._size;
